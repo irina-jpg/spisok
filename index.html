@@ -22,40 +22,39 @@
         <div><input type="radio" name="check" id="checkk" v-on:click="filter1" />
           <label for="checkk"> Выполненные задачи</label>
         
-        </div>
+        </div>  
       </div><input type="radio" name="check" id="nocheckk" v-on:click="filter2" />
-            <label for="nocheckk">Невыполненные задачи</label>
-            
-        </div>
+        <label for="nocheckk">Невыполненные задачи</label>
+          
+      
         <div><input type="radio" name="check" id="allTasks" v-on:click="allTasks" />
-            <label for="allTasks">Показать все задачи</label>
-        </div>
-
+           <label for="allTasks">Показать все задачи</label>
       </div>
-
-            <div>
-                <label for="sort">Сортировать по имени</label>
-                <input type="radio" name="sort" id="sort1"
-                    v-on:click="sort1">
-            <p>Сортировать по дате</p>
-                <label for="sort2">Самые ранние задачи</label>
-                <input type="radio" name="sort" id="sort2"
-                    v-on:click="sort2">
-                <label for="sort3">Самые поздние задачи</label>
-                <input type="radio" name="sort" id="sort3"
-                    v-on:click="sort3">
-            </div>
-            <h1>Мои задачи</h1>
-      <todo-item
-        v-for="(todo,index) in todoList"
-        :todo="todo"
-        :key="todo.id"
-        :index="index"
-        v-on:complete-done="makeDone(index)"
-        v-on:dblclick="del(index)"
-        :class="{ noActive: todo.noActive}"
-      >
-      </todo-item>
+      </div>
+          <label for="sort">Сортировать по имени</label>
+          <input type="radio" name="sort" id="sort1"
+            v-on:click="sort1">
+          <p>Сортировать по дате</p>
+          <label for="sort2">Самые ранние задачи</label>
+          <input type="radio" name="sort" id="sort2"
+            v-on:click="sort2">
+          <label for="sort3">Самые поздние задачи</label>
+          <input type="radio" name="sort" id="sort3"
+            v-on:click="sort3">
+        </div>
+        </div>
+          <h1>Мои задачи</h1>
+          <todo-item
+            v-for="(todo,index) in todoList"
+            :todo="todo"
+            :key="todo.id"
+            :index="index"
+            v-on:complete-done="makeDone(index)"
+            v-on:dblclick="del(index)"
+            :class="{ noActive: todo.noActive}">
+          </todo-item>
+        </div>
     </div>
   </body>
-</html>
+
+  </html>

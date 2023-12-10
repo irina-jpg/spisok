@@ -8,7 +8,7 @@ const todoItem = {
   },
   template: `
     <div> {{ index }} - {{ todo.title}}
-    <input type="checkbox" :checked="todo.completed @click="complete" />
+    <input type="checkbox" :checked="todo.completed" @click="complete" />
     </div>
     `,
 };
@@ -91,7 +91,7 @@ const app = Vue.createApp({
   },
 
   components: {
-    "todo-items": todoItem,
+    "todo-item": todoItem,
   },
 });
 
